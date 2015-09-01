@@ -1,0 +1,66 @@
+/*
+ * Skin: Kestrel 
+ * based on Green skin
+ * -----------
+ */
+
+@import "../../bootstrap-less/mixins.less";
+@import "../../bootstrap-less/variables.less";
+@import "../variables.less";
+@import "../mixins.less";
+
+@wingspan-green: #58C4A0;
+
+.skin-kestrel {
+  //Navbar
+  .main-header {
+    .navbar {
+      .navbar-variant(@wingspan-green; #fff);
+      .sidebar-toggle {
+        color: #fff;
+        &:hover {
+          background-color: darken(@wingspan-green, 5%);
+        }
+      }
+      @media(max-width: @screen-header-collapse) {
+        .dropdown-menu {
+          li {
+            &.divider {
+              background-color: rgba(255,255,255,0.1);
+            }
+            a {
+              color: #fff;
+              &:hover {
+                background: darken(@wingspan-green, 5%);
+              }
+            }
+          }
+        }
+      }
+    }
+    //Logo
+    .logo {
+      .logo-variant(darken(@wingspan-green, 5%));
+    }
+
+    li.user-header {
+      background-color: @wingspan-green;
+    }
+  }
+
+  //Content Header
+  .content-header {
+    background: transparent;
+  }
+
+  //Create the sidebar skin
+  .skin-dark-sidebar(@wingspan-green);
+
+  //custm tabs active tab
+  .nav-tabs-custom {
+    > .nav-tabs {
+      > li.active {
+      border-top-color: @wingspan-green;
+    }
+  }
+}
